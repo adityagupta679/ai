@@ -1,0 +1,3 @@
+pip install virtualenvwrapper-win
+
+mkvirtualenv -a E:\Projects\IITJ_AI iitj_ai
