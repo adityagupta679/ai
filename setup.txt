@@ -1,8 +1,68 @@
-pip install virtualenvwrapper-win
 
-mkvirtualenv -a E:\Projects\IITJ_AI iitj_ai
+#########################################Server Setup#############################
+# Copy the installation Directory as E:\ as E:\PYTHONRSETUP
+# 
+# install python, location E:\Python36 E:\Python37 etc..
+# 
 
 
+###Environment Entries 
+#Make directories E:\Projects\ , E:\Environments\  
+# set two system environment variables as below,
+WORKON_HOME=  E:\Environments\  # for storing environments
+PROJECT_HOME= E:\Projects\      # for storing projects
+
+# Additional env variables , will update later
+#export PIP_FIND_LINKS="E:\PYTHONRSETUP\PyPackages"  
+#export PIP_NO_INDEX="E:\PYTHONRSETUP\PyPackages"
+
+
+
+#### Install virtualenvwrapper-win package
+#### At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. 
+#### This means that each project can have its own dependencies, regardless of what dependencies every other project has.
+####
+#### We are using virtualenvwrapper-win library for managing virtual environments
+#### Link to virtualenvwrapper-win library documentation  https://pypi.org/project/virtualenvwrapper-win/
+
+# E:\PYTHONRSETUP\PyPackages location has some python packages  downloaded and stored. 
+# Goto command line and  install virtualenvwrapper-win as follows.
+
+pip install --no-index --find-links "E:\PYTHONRSETUP\PyPackages" virtualenvwrapper-win
+
+
+#########################################Server Setup End ############################# 
+
+
+
+############################# Working on a project ############################
+
+#### Make a virtual environment for your project , preferably same name as your project name 
+#### At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. 
+#### This means that each project can have its own dependencies, regardless of what dependencies every other project has.
+####
+#### We are using virtualenvwrapper-win library for managing virtual environments
+#### Link to virtualenvwrapper-win library documentation  https://pypi.org/project/virtualenvwrapper-win/ 
+
+
+# Make a virtual environment branchcashprediction 
+
+
+mkvirtualenv -a E:\Projects\IITJ_AI iitj_ai #mkvirtualenv branchcashprediction # this will make a virtual env with default tools like pip etc, and also activate the environment for you.
+
+## Now setup ypur project directory in E:\Projects  
+## Project Directory shuld have a requirements file 
+
+# Every project should have a requirements file , (a text file with all the libraries required for the job in separate lines)
+# Use the below command to set up the environment for your project with the requied libraries. 
+pip install --no-index --find-links "E:\PYTHONRSETUP\PyPackages" -r E:\Projects\BranchCashPrediction\requirements.txt 
+
+
+
+
+
+
+## Installing Jupyter Notebook Extensions
 #https://towardsdatascience.com/jupyter-notebook-extensions-517fa69d2231
 
 pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install 
