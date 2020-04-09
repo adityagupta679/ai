@@ -1,3 +1,8 @@
 pip install virtualenvwrapper-win
 
 mkvirtualenv -a E:\Projects\IITJ_AI iitj_ai
+
+
+#https://towardsdatascience.com/jupyter-notebook-extensions-517fa69d2231
+
+pip install jupyter_contrib_nbextensions && jupyter contrib nbextension install 
