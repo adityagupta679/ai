@@ -7,4 +7,4 @@ Setup files are downloaded beforehand in an internet based system  by listing re
 ```python
 pip download -r requirements.txt
 ```
-This downloads python packages in the directory this command is run. This directory can be now zipped and moved to the enterprise server.
+This downloads python packages in the directory this command is run. This directory can be now zipped and moved to the enterprise server. Follow steps in setup file to setup python running in server.
